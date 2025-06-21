@@ -2,7 +2,6 @@ title: "Net-Archive"
 description: "Net-Archive is a site where I put docs that provide guidance on using software."
 remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "dark"
-include_footer: false
 
 plugins:
   - jekyll-remote-theme
@@ -19,13 +18,10 @@ nav:
   - title: "Docs"
     url: /docs/
 
-
-# Author (optional)
 author:
   name: "ernugraha"
   avatar: "/assets/images/avatar.png"
 
-# Defaults (required for layout to work properly)
 defaults:
   - scope:
       path: ""
@@ -34,7 +30,6 @@ defaults:
       layout: single
       author_profile: true
       css: "/assets/css/custom.css"
-
   - scope:
       path: ""
       type: "posts"
@@ -42,7 +37,6 @@ defaults:
       layout: single
       author_profile: true
       css: "/assets/css/custom.css"
-
 
 collections:
   pages:
@@ -54,7 +48,8 @@ atom_feed:
 
 footer:
   custom: custom-footer
+  text: ""
+  links: []
 
-# Custom CSS
 sass:
   style: compressed
