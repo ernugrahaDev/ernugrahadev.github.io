@@ -29,16 +29,20 @@ author:
 defaults:
   - scope:
       path: ""
-      type: "posts"
-    values:
-      layout: single
-      author_profile: true
-  - scope:
-      path: ""
       type: "pages"
     values:
       layout: single
       author_profile: true
+      css: "/assets/css/custom.css"
+
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: single
+      author_profile: true
+      css: "/assets/css/custom.css"
+
 
 collections:
   pages:
@@ -49,32 +53,8 @@ atom_feed:
   hide: true
 
 footer:
-  links:
-    - label: "GitHub"
-      icon: "fab fa-github"
-      url: "https://github.com/ernugrahaDev"
-    - label: "About"
-      url: "/about/"
-
-  text: "© 2025 ernugraha. Built with Jekyll"
+  custom: custom-footer
 
 # Custom CSS
 sass:
   style: compressed
-
-# Make sure to include the custom CSS file
-defaults:
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: single
-      author_profile: true
-      css: "/assets/css/custom.css"
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: single
-      author_profile: true
-      css: "/assets/css/custom.css"
