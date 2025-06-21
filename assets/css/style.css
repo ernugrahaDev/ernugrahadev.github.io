@@ -4,6 +4,12 @@ html, body {
   padding: 0;
 }
 
+.meta {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 1rem;
+}
+
 .wrapper {
   min-height: calc(100vh - 60px); /* tinggi layar dikurang tinggi footer */
   display: flex;
