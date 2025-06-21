@@ -57,3 +57,24 @@ footer:
       url: "/about/"
 
   text: "© 2025 ernugraha. Built with Jekyll"
+
+# Custom CSS
+sass:
+  style: compressed
+
+# Make sure to include the custom CSS file
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: single
+      author_profile: true
+      css: "/assets/css/custom.css"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: single
+      author_profile: true
+      css: "/assets/css/custom.css"
