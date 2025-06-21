@@ -1,11 +1,12 @@
 title: "Net-Archive"
 description: "Net-Archive is a site where I put docs that provide guidance on using software."
-remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "dark"
+theme: "minimal-mistakes-jekyll"
 
 plugins:
-  - jekyll-remote-theme
   - jekyll-include-cache
+
+
 
 # Navigation
 nav:
