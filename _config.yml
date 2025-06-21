@@ -9,3 +9,6 @@ collections:
 
 sass:
   style: compressed
+
+highlighter: rouge
+markdown: kramdown
