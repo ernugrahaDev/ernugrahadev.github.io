@@ -2,6 +2,7 @@ title: "Net-Archive"
 description: "Net-Archive is a site where I put docs that provide guidance on using software."
 remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "dark"
+include_footer: false
 
 plugins:
   - jekyll-remote-theme
@@ -46,3 +47,13 @@ collections:
 
 atom_feed:
   hide: true
+
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/ernugrahaDev"
+    - label: "About"
+      url: "/about/"
+
+  text: "© 2025 ernugraha. Built with Jekyll"
