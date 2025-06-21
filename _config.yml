@@ -13,6 +13,11 @@ nav:
     url: /
   - title: "About"
     url: /about/
+  - title: "Posts"
+    url: /posts/
+  - title: "Docs"
+    url: /docs/
+
 
 # Author (optional)
 author:
@@ -41,8 +46,3 @@ collections:
 
 atom_feed:
   hide: true
-
-footer:
-  links: [https://https://github.com/ernugrahaDev]
-  text: "© 2025 ernugraha."
-
