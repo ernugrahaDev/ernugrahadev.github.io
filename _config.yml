@@ -1,0 +1,40 @@
+title: "Net-Archive"
+description: "Net-Archive is a site where I put docs that provide guidance on using software."
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "dark"
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-include-cache
+
+# Navigation
+nav:
+  - title: "Home"
+    url: /
+  - title: "About"
+    url: /about/
+
+# Author (optional)
+author:
+  name: "ernugraha"
+  avatar: "/assets/images/avatar.png"
+
+# Defaults (required for layout to work properly)
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: single
+      author_profile: true
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: single
+      author_profile: true
+
+collections:
+  pages:
+    output: true
+    permalink: /:path/
