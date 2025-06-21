@@ -38,3 +38,11 @@ collections:
   pages:
     output: true
     permalink: /:path/
+
+atom_feed:
+  hide: true
+
+footer:
+  links: [https://https://github.com/ernugrahaDev]
+  text: "© 2025 ernugraha."
+
