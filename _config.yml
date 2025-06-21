@@ -1,0 +1,11 @@
+title: Net-Archive
+description: Documentation site inspired by SuperTuxKart
+markdown: kramdown
+theme: null
+
+collections:
+  posts:
+    output: true
+
+sass:
+  style: compressed
