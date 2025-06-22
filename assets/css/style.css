@@ -25,6 +25,13 @@ body {
   word-wrap: break-word;
 }
 
+h2 {
+  border-bottom: 1px solid #333;
+  padding-bottom: 0.25rem;
+  margin-top: 2rem;
+}
+
+
 header {
   background-color: #121212;
   padding: 1rem 2rem;
