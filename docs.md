@@ -10,7 +10,7 @@ Tested on Debian 12 (amd-64)
 {% assign grouped = site.posts | group_by: "category" %}
 
 {% for category in grouped %}
-## 🔹 {{ category.name | capitalize }}
+## {{ category.name | capitalize }}
 
 <ul>
   {% for post in category.items %}

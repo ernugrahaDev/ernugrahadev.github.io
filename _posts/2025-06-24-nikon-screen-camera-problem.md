@@ -2,7 +2,7 @@
 layout: default
 title: Your Nikon camera have a screen problem?
 author: ernugraha
-date: 2025-06-24 08:52:59 +0700
+date: 2025-06-24 08:40:59 +0700
 category: hardware
 ---
 Tested on Nikon D5000
