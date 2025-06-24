@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Your Nikon camera have a screen problem?
+title: Nikon screem camera problem
 author: ernugraha
 date: 2025-06-24 08:40:59 +0700
 category: hardware
@@ -22,7 +22,8 @@ First, i turn on the camera itself, but what happened is the camera screen bliki
 
 ## How to fix?
 You can view the results via the LCD screen (currently impossible because the screen itself is broken), or use USB to a computer, or use HDMI (because the Nikon D5000 includes a mini HDMI port) or replace the LCD screen itself.
-[Nikon D5000 ports](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRselPifCNELqQKhAqNwJZZxUaiJfeAgfJWmh4VvYScOrufayNZiPh1E8jXpfbIEhqXc1I&usqp=CAU)
+
+![Nikon D5000 ports](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRselPifCNELqQKhAqNwJZZxUaiJfeAgfJWmh4VvYScOrufayNZiPh1E8jXpfbIEhqXc1I&usqp=CAU)
 
 ### By using USB
 You can connect USB from Camera to your computer by pressing Playback Button (video icon on corner top of left back camera), then plug USB Cable (Mini USB) to middle port (see image on top). Then you will see the camera connected to your computer -not see? Open File Manager (File Explorer on Windows).
