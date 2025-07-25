@@ -7,58 +7,44 @@
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-  <div class="wrapper">
-    <header>
-      <div class="logo">{{ site.title }}</div>
-      <button id="sidebar-toggle" onclick="toggleSidebar()">☰</button>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/docs/">Docs</a>
-        <a href="/about/">About</a>
-      </nav>
-    </header>
+  <header>
+    <div class="logo">{{ site.title }}</div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/docs/">Docs</a>
+      <a href="/about/">About</a>
+    </nav>
+  </header>
 
-    <div class="container">
-      <aside id="sidebar">
-        <h3>Kategori</h3>
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>Kategori</h2>
+      <ul>
+        <li><strong>Hardware</strong></li>
+        <li><a href="/category/raspberry-pi/">Raspberry Pi</a></li>
+        <li><strong>Linux</strong></li>
+        <li><a href="/category/debian/">Debian</a></li>
+      </ul>
+    </aside>
 
-        <h4>Hardware</h4>
-        <ul>
-          <li><a href="/docs/#raspberry-pi">Raspberry Pi</a></li>
-        </ul>
+    <main class="main-content">
+      {% if page.title %}
+        <h1>{{ page.title }}</h1>
+      {% endif %}
 
-        <h4>Linux</h4>
-        <ul>
-          <li><a href="/docs/#debian">Debian</a></li>
-        </ul>
-      </aside>
+      {% if page.author or page.date %}
+        <p class="meta">
+          {% if page.author %}Author: {{ page.author }}{% endif %}
+          {% if page.date %} • Uploaded: {{ page.date | date: "%d %B %Y, %H:%M" }}{% endif %}
+        </p>
+      {% endif %}
 
-      <main>
-        {% if page.title %}
-          <h1>{{ page.title }}</h1>
-        {% endif %}
-
-        {% if page.author or page.date %}
-          <p class="meta">
-            {% if page.author %}Author: {{ page.author }}{% endif %}
-            {% if page.date %} • Uploaded: {{ page.date | date: "%d %B %Y, %H:%M" }}{% endif %}
-          </p>
-        {% endif %}
-
-        {{ content }}
-      </main>
-    </div>
+      {{ content }}
+    </main>
   </div>
 
   <footer>
-    <p>&copy; 2025 ernugraha. Powered by <a href="https://jekyllrb.com/">Jekyll.</a></p>
+    <p>&copy; 2025 ernugraha. Powered by <a href="https://jekyllrb.com/">Jekyll</a>.</p>
   </footer>
-
-  <script>
-    function toggleSidebar() {
-      var sidebar = document.getElementById("sidebar");
-      sidebar.classList.toggle("open");
-    }
-  </script>
 </body>
 </html>
