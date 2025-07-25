@@ -1,19 +1,8 @@
+/* Reset dan struktur dasar */
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-}
-
-.meta {
-  font-size: 0.9rem;
-  color: #aaa;
-  margin-bottom: 1rem;
-}
-
-.wrapper {
-  min-height: calc(100vh - 60px); /* tinggi layar dikurang tinggi footer */
-  display: flex;
-  flex-direction: column;
 }
 
 body {
@@ -22,17 +11,24 @@ body {
   font-family: 'Segoe UI', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  word-wrap: break-word;
 }
 
-h2 {
-  border-bottom: 1px solid #333;
-  padding-bottom: 0.25rem;
-  margin-top: 2rem;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
+.layout {
+  display: flex;
+  flex: 1;
+}
 
+/* Header (Sticky) */
 header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   background-color: #121212;
   padding: 1rem 2rem;
   display: flex;
@@ -43,43 +39,73 @@ header {
 header .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #ffffff;
-}
-
-a {
-  color: #b482f4;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #d1a8ff;
-  text-decoration: underline;
+  color: #fff;
 }
 
 nav a {
   color: #b482f4;
+  margin-left: 1rem;
+  text-decoration: none;
 }
 
 nav a:hover {
   color: #d1a8ff;
+  text-decoration: underline;
 }
 
-main {
-  flex: 1;
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
-footer {
-  height: 60px;
-  text-align: center;
+/* Sidebar */
+.sidebar {
+  background-color: #151515;
   padding: 1rem;
+  width: 220px;
+  min-height: 100%;
+}
+
+.sidebar h2 {
+  font-size: 1rem;
+  margin-top: 0;
+}
+
+.sidebar h3 {
+  font-size: 0.95rem;
+  margin-top: 1rem;
+}
+
+.sidebar a {
+  display: block;
+  margin: 0.25rem 0 0.5rem 0;
+  color: #b482f4;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  color: #d1a8ff;
+}
+
+/* Konten Utama */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.meta {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 1rem;
+}
+
+/* Footer (Sticky Bottom) */
+footer {
   background-color: #111;
   color: #888;
   font-size: 0.9rem;
+  text-align: center;
+  padding: 1rem;
 }
 
+/* Kode dan pre */
 pre {
   background-color: #2b2b2b;
   color: #e0e0e0;
@@ -87,9 +113,6 @@ pre {
   border-radius: 8px;
   overflow-x: auto;
   font-family: monospace;
-  font-size: 0.95rem;
-  line-height: 1.4;
-  margin-bottom: 1.5rem;
 }
 
 code {
@@ -98,33 +121,19 @@ code {
   border-radius: 4px;
 }
 
-pre code {
-  background: none;
-  padding: 0;
-  border-radius: 0;
-}
-
-/* Responsive: Nav & layout on small screens */
+/* Responsive */
 @media (max-width: 768px) {
-  header {
+  .layout {
     flex-direction: column;
-    align-items: flex-start;
+  }
+
+  .sidebar {
+    width: 100%;
   }
 
   nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
     margin-top: 0.5rem;
-  }
-
-  nav a {
-    margin-left: 0;
-    color: #b482f4;
-  }
-
-  main {
-    padding: 1rem;
+    display: flex;
+    gap: 1rem;
   }
 }
-
