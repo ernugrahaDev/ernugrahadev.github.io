@@ -63,14 +63,13 @@ nav a:hover {
 }
 
 aside {
-  width: 250px;
-  background-color: #181818;
-  padding: 1rem;
-  border-radius: 8px;
-  color: #ccc;
-  font-size: 0.95rem;
-  flex-shrink: 0;
+  position: fixed;
+  top: 60px; /* agar tidak nutupi header */
+  left: 0;
+  height: calc(100vh - 60px);
+  z-index: 100;
 }
+
 
 aside h3 {
   font-size: 1.1rem;
@@ -112,6 +111,7 @@ main {
   flex: 1;
   max-width: 800px;
   padding: 0 1rem;
+  margin-left: 250px;
 }
 
 .meta {
