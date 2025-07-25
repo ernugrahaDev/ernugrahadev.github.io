@@ -10,6 +10,7 @@
   <div class="wrapper">
     <header>
       <div class="logo">{{ site.title }}</div>
+      <button id="sidebar-toggle" onclick="toggleSidebar()">☰</button>
       <nav>
         <a href="/">Home</a>
         <a href="/docs/">Docs</a>
@@ -17,24 +18,47 @@
       </nav>
     </header>
 
-    <main>
-      {% if page.title %}
-        <h1>{{ page.title }}</h1>
-      {% endif %}
+    <div class="container">
+      <aside id="sidebar">
+        <h3>Kategori</h3>
 
-      {% if page.author or page.date %}
-        <p class="meta">
-          {% if page.author %}Author: {{ page.author }}{% endif %}
-          {% if page.date %} • Uploaded: {{ page.date | date: "%d %B %Y, %H:%M" }}{% endif %}
-        </p>
-      {% endif %}
+        <h4>Hardware</h4>
+        <ul>
+          <li><a href="/docs/#raspberry-pi">Raspberry Pi</a></li>
+        </ul>
 
-      {{ content }}
-    </main>
+        <h4>Linux</h4>
+        <ul>
+          <li><a href="/docs/#debian">Debian</a></li>
+        </ul>
+      </aside>
+
+      <main>
+        {% if page.title %}
+          <h1>{{ page.title }}</h1>
+        {% endif %}
+
+        {% if page.author or page.date %}
+          <p class="meta">
+            {% if page.author %}Author: {{ page.author }}{% endif %}
+            {% if page.date %} • Uploaded: {{ page.date | date: "%d %B %Y, %H:%M" }}{% endif %}
+          </p>
+        {% endif %}
+
+        {{ content }}
+      </main>
+    </div>
   </div>
 
   <footer>
     <p>&copy; 2025 ernugraha. Powered by <a href="https://jekyllrb.com/">Jekyll.</a></p>
   </footer>
+
+  <script>
+    function toggleSidebar() {
+      var sidebar = document.getElementById("sidebar");
+      sidebar.classList.toggle("open");
+    }
+  </script>
 </body>
 </html>
