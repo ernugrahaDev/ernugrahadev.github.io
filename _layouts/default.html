@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>{{ page.title }} | {{ site.title }}</title>
+  <title>Net-Archive</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/style.css" />
 </head>
 <body>
   <header>
-    <div class="logo">{{ site.title }}</div>
+    <div class="logo">Net-Archive</div>
     <nav>
       <a href="/">Home</a>
       <a href="/docs/">Docs</a>
@@ -19,27 +19,19 @@
   <div class="layout">
     <aside class="sidebar">
       <h2>Kategori</h2>
+      <h3>Hardware</h3>
       <ul>
-        <li><strong>Hardware</strong></li>
-        <li><a href="/category/raspberry-pi/">Raspberry Pi</a></li>
-        <li><strong>Linux</strong></li>
-        <li><a href="/category/debian/">Debian</a></li>
+        <li><a href="/categories/raspberry-pi/">Raspberry Pi</a></li>
+      </ul>
+      <h3>Linux</h3>
+      <ul>
+        <li><a href="/categories/debian/">Debian</a></li>
       </ul>
     </aside>
 
     <main class="main-content">
-      {% if page.title %}
-        <h1>{{ page.title }}</h1>
-      {% endif %}
-
-      {% if page.author or page.date %}
-        <p class="meta">
-          {% if page.author %}Author: {{ page.author }}{% endif %}
-          {% if page.date %} • Uploaded: {{ page.date | date: "%d %B %Y, %H:%M" }}{% endif %}
-        </p>
-      {% endif %}
-
-      {{ content }}
+      <h1>Welcome</h1>
+      <p>Created on Debian 12 (Bookworm Linux 6.1.0-37-amd64)</p>
     </main>
   </div>
 
