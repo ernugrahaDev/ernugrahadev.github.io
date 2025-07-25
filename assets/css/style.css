@@ -1,3 +1,4 @@
+/* Reset dan struktur dasar */
 html, body {
   height: 100%;
   margin: 0;
@@ -8,101 +9,131 @@ body {
   background-color: #1e1e1e;
   color: #e0e0e0;
   font-family: 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-a {
-  color: #b482f4;
-  text-decoration: none;
-}
-a:hover {
-  color: #d1a8ff;
-  text-decoration: underline;
+.layout {
+  display: flex;
+  flex: 1;
 }
 
+/* Header (Sticky) */
 header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   background-color: #121212;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
 }
+
 header .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #ffffff;
+  color: #fff;
 }
+
 nav a {
+  color: #b482f4;
   margin-left: 1rem;
+  text-decoration: none;
 }
 
-.layout {
-  flex: 1;
-  display: flex;
+nav a:hover {
+  color: #d1a8ff;
+  text-decoration: underline;
 }
 
+/* Sidebar */
 .sidebar {
-  position: fixed;
-  top: 60px;
-  left: 0;
-  width: 220px;
-  height: calc(100vh - 60px);
-  background-color: #181818;
+  background-color: #151515;
   padding: 1rem;
-  box-sizing: border-box;
-  overflow-y: auto;
-  border-right: 1px solid #333;
+  width: 220px;
+  min-height: 100%;
 }
-.sidebar h2, .sidebar h3 {
-  color: #ffffff;
+
+.sidebar h2 {
+  font-size: 1rem;
   margin-top: 0;
 }
-.sidebar ul {
-  list-style: none;
-  padding-left: 0;
-}
-.sidebar li {
-  margin-bottom: 0.5rem;
+
+.sidebar h3 {
+  font-size: 0.95rem;
+  margin-top: 1rem;
 }
 
+.sidebar a {
+  display: block;
+  margin: 0.25rem 0 0.5rem 0;
+  color: #b482f4;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  color: #d1a8ff;
+}
+
+/* Konten Utama */
 .main-content {
-  margin-left: 240px;
-  padding: 2rem 1rem;
   flex: 1;
-  box-sizing: border-box;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
+.meta {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 1rem;
+}
+
+/* Footer (Sticky Bottom) */
 footer {
-  height: 60px;
-  text-align: center;
-  padding: 1rem;
   background-color: #111;
   color: #888;
   font-size: 0.9rem;
-  margin-top: auto;
+  text-align: center;
+  padding: 1rem;
 }
 
+/* Kode dan pre */
+pre {
+  background-color: #2b2b2b;
+  color: #e0e0e0;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: monospace;
+}
+
+code {
+  background-color: #1f1f1f;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .sidebar {
-    display: none;
-  }
-
-  .main-content {
-    margin-left: 0;
-    padding: 1rem;
-  }
-
-  header {
+  .layout {
     flex-direction: column;
-    align-items: flex-start;
+  }
+
+  .sidebar {
+    width: 100%;
   }
 
   nav {
     margin-top: 0.5rem;
+    display: flex;
+    gap: 1rem;
   }
 }
