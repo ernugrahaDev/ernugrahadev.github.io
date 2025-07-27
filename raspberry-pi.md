@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Documentation
+title: Raspberry Pi Tutorials
 permalink: /raspberry-pi/
 ---
 
