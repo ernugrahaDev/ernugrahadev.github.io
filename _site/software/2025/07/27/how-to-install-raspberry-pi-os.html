@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>How to install Raspberry Pi OS? | Net-Archive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="logo">Net-Archive</div>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/docs/">Docs</a>
+        <a href="/about/">About</a>
+      </nav>
+    </header>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <h2>Category</h2>
+        <h3>Hardware</h3>
+        <a href="/raspberry-pi/">Raspberry Pi</a>
+        <h3>Linux</h3>
+        <a href="/debian/">Debian</a>
+      </aside>
+
+      <main class="main-content">
+        
+          <h1>How to install Raspberry Pi OS?</h1>
+        
+        
+        <p class="meta">
+          Author: ernugraha
+           • Uploaded: 27 July 2025, 06:30
+        </p>
+        
+        <h1 id="this-site-work-in-progress">This site work-in-progress!</h1>
+<p>Tested on raspberry pi 4 4gb</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+  <li><a href="#what-you-need">What you need</a></li>
+  <li><a href="#installing-the-imager">Installing The Imager</a></li>
+  <li><a href="#flash-the-os">Flash the OS</a></li>
+  <li><a href="#final">Final</a></li>
+  <li><a href="#image-source">Source</a></li>
+</ul>
+
+<h2 id="what-you-need">What you need</h2>
+<ul>
+  <li>Raspberry Pi (work on pi 4, 5)</li>
+  <li>Micro SD (min. 16gb)</li>
+  <li>Micro SD Adapter (optional)</li>
+  <li>a PC for flashing OS</li>
+</ul>
+
+<h2 id="installing-the-imager">Installing The Imager</h2>
+<p>First you need installing a app called “Raspberry Pi Imager” for flashing os to microSD.
+To install it you can open this <a href="https://www.raspberrypi.com/software/">link</a>, then click download
+(select the correct OS you use). <img src="/assets/imgs/rpi/w1.png" alt="w1" /></p>
+
+<p>Because i use Linux, type this on terminal</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>rpi-imager
+</code></pre></div></div>
+
+<h2 id="flash-the-os">Flash the OS</h2>
+<p>After you installed rpi-imager, insert your microSD to adapter or SD port or anything that can read microSD,
+then open Raspberry Pi Imager app.</p>
+
+<p><img src="/assets/imgs/rpi/w2.png" alt="w2" /></p>
+
+<p>Then choose the Raspberry pi Device (if you use raspberry pi 5 example, select Raspberry Pi 5). Because i use rpi4, i will choose Raspberry 4. Next choose the operating system (OS), i recommend to use Raspberry Pi OS 64 Bit. Then choose the storage, usually on linux labeled with “Generic Storage Device”.</p>
+
+<p>Maybe result look like this.</p>
+
+<p><img src="/assets/imgs/rpi/w3.png" alt="w3" /></p>
+
+<p>Then click “Next”. You will be asked for apply OS customization settings, if you want to do that later, click “No” and skip next tutorial and go to <a href="#final">final</a>.</p>
+
+<p><img src="/assets/imgs/rpi/w4.png" alt="w4" /></p>
+
+<p>If you click “Edit Settings”, you will be able see customization settings.</p>
+
+<p><img src="/assets/imgs/rpi/w5.png" alt="w5" /></p>
+
+<p>Just set it then click “Save”</p>
+
+<p>Done? Next click “Yes” then… click “Yes” again.</p>
+
+<p><img src="/assets/imgs/rpi/w6.png" alt="w6" /></p>
+
+<p>And well done… wait until finish.
+(DONT UNPLUG YOUR MICROSD UNTIL FINISH!)
+<img src="/assets/imgs/rpi/w7.png" alt="w7" /></p>
+
+<h2 id="final">Final</h2>
+<p>Unplug the microSD, then plug to your Raspberry Pi, turn on, and Done!</p>
+
+<p><img src="/assets/imgs/rpi/w8.png" alt="w8" /></p>
+
+<p>What Next? Checkout <a href="https://ernugrahadev.github.io/raspberry-pi/">https://ernugrahadev.github.io/raspberry-pi/</a>. Bye!</p>
+<h2 id="image-sources">Image Sources</h2>
+<p>https://www.raspberrypi.com/software/</p>
+
+      </main>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 ernugraha. Powered by <a href="https://jekyllrb.com/">Jekyll</a>.</p>
+    </footer>
+  </div>
+</body>
+</html>
