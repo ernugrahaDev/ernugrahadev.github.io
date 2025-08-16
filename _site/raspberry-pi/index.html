@@ -2,10 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Documentation | Net-Archive</title>
+  <title>Raspberry Pi Tutorials | Net-Archive</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/assets/css/style.css" />
+  <style>
+    pre {
+      position: relative;
+    }
+    .copy-btn {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      padding: 3px 6px;
+      background: #444;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.8rem;
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out;
+    }
+    pre:hover .copy-btn {
+      opacity: 1;
+    }
+  </style>
 </head>
+
 <body>
   <div class="wrapper">
     <header>
@@ -28,7 +51,7 @@
 
       <main class="main-content">
         
-          <h1>Documentation</h1>
+          <h1>Raspberry Pi Tutorials</h1>
         
         
         <p>Tested on Debian 12 (amd-64). Also Raspberry Pi 4 model B 4gb</p>
@@ -41,5 +64,25 @@
       <p>&copy; 2025 ernugraha. Powered by <a href="https://jekyllrb.com/">Jekyll</a>.</p>
     </footer>
   </div>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll("pre > code").forEach(function (codeBlock) {
+      var button = document.createElement("button");
+      button.innerText = "Copy";
+      button.className = "copy-btn";
+
+      button.addEventListener("click", function () {
+        navigator.clipboard.writeText(codeBlock.innerText).then(function () {
+          button.innerText = "Copied!";
+          setTimeout(() => button.innerText = "Copy", 1500);
+        });
+      });
+
+      codeBlock.parentNode.insertBefore(button, codeBlock);
+    });
+  });
+  </script>
 </body>
 </html>
+
