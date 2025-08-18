@@ -2,9 +2,9 @@ title: dash
 author: GitHub User
 email: 
 description: > # this means to ignore newlines until "show_exerpts:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Hi! I just like to making some games, testing
+  new code, modifying my system (sometimes broke).
+  Just that!
 show_excerpts: false # set to true to show excerpts on the homepage
 
 paginate: 1
@@ -22,7 +22,7 @@ dash:
 
   # (optional) discqus comment configuration
   disqus:
-    shortname: bitbrain-github-io
+    shortname: ernugrahadev-github-io
 
   # generate social links in footer
   # supported colors: green, red, orange, blue, cyan, pink, teal, yellow, indigo, purple
@@ -30,10 +30,10 @@ dash:
     - url: https://youtube.com/
       icon: youtube-square
       color: red
-    - url: https://bitbrain.itch.io
+    - url: https://ernugraha.itch.io/
       icon: itch-io
       color: red
-    - url: https://github.com/bitbrain
+    - url: https://github.com/ernugrahadev
       icon: github-square
       color: purple
 
