@@ -1,6 +1,6 @@
 title: dash
 author: GitHub User
-email: miguel-gonzalez@gmx.de
+email: 
 description: > # this means to ignore newlines until "show_exerpts:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
@@ -27,9 +27,9 @@ dash:
   # generate social links in footer
   # supported colors: green, red, orange, blue, cyan, pink, teal, yellow, indigo, purple
   social_links:
-    - url: https://twitter.com/bitbrain_
-      icon: twitter-square
-      color: cyan
+    - url: https://youtube.com/
+      icon: youtube-square
+      color: red
     - url: https://bitbrain.itch.io
       icon: itch-io
       color: red
@@ -53,7 +53,6 @@ dash:
   #avatar_path: /assets/avatar.png
 
 # Build settings
-theme: jekyll-dash
 
 plugins:
  - jekyll-feed
