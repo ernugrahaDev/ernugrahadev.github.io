@@ -18,6 +18,33 @@
       window.FontAwesomeConfig = {
         searchPseudoElements: true
       }
+      document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll("pre > code").forEach(function (codeBlock) {
+        var button = document.createElement("button");
+        button.innerText = "Copy";
+        button.style.position = "absolute";
+        button.style.top = "6px";
+        button.style.right = "6px";
+        button.style.padding = "3px 6px";
+        button.style.background = "#444";
+        button.style.color = "#fff";
+        button.style.border = "none";
+        button.style.borderRadius = "4px";
+        button.style.cursor = "pointer";
+        button.style.fontSize = "0.8rem";
+
+        button.addEventListener("click", function () {
+          navigator.clipboard.writeText(codeBlock.innerText).then(function () {
+            button.innerText = "Copied!";
+            setTimeout(() => button.innerText = "Copy", 1500);
+          });
+        });
+
+        var pre = codeBlock.parentNode;
+        pre.style.position = "relative";
+        pre.insertBefore(button, codeBlock);
+      });
+    });
     </script>
   </body>
 
