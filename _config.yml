@@ -1,13 +1,13 @@
-title: dash
+title: ernugrahaDev
 author: GitHub User
 email: 
 description: > # this means to ignore newlines until "show_exerpts:"
   Hi! I just like to making some games, testing
-  new code, modifying my system (sometimes broke).
-  Just that!
+  new code, modifying my system (sometimes broke). 
+  I was learning python now! Just that!
 show_excerpts: false # set to true to show excerpts on the homepage
 
-paginate: 1
+paginate: 6
 paginate_path: "/blog/page:num/"
 
 tag_permalink_style: pretty
