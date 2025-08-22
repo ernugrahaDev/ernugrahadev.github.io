@@ -46,6 +46,40 @@
       });
     });
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+    <script src="/search.json" type="application/json"></script>
+    <script>
+      async function initSearch() {
+        const res = await fetch('/search.json');
+        const docs = await res.json();
+
+        const idx = lunr(function () {
+          this.ref('url');
+          this.field('title');
+          this.field('content');
+
+          docs.forEach(doc => this.add(doc));
+        });
+
+        const input = document.getElementById('search-input');
+        const results = document.getElementById('results-container');
+
+        input.addEventListener('keyup', function () {
+          const query = this.value;
+          results.innerHTML = '';
+          if (query.length > 2) {
+            const matches = idx.search(query);
+            matches.forEach(match => {
+              const doc = docs.find(d => d.url === match.ref);
+              const li = document.createElement('li');
+              li.innerHTML = `<a href="${doc.url}">${doc.title}</a>`;
+              results.appendChild(li);
+            });
+          }
+        });
+      }
+      initSearch();
+    </script>
   </body>
 
 </html>

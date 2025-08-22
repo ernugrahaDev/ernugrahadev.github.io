@@ -60,3 +60,4 @@ plugins:
  - jekyll-paginate
  - liquid-md5
  - jekyll/tagging
+ - jekyll-lunr-js-search
